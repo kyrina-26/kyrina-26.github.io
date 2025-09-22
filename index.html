@@ -1,0 +1,132 @@
+<!doctype html>
+<html>
+    <head>
+    <meta charset="utf-8" />
+    <title>The Web Gallery</title>
+    <link href="style/main.css" rel="stylesheet" type="text/css" />
+    <link href="style/comments.css" rel="stylesheet" type="text/css" />
+    <link href="style/uploadForm.css" rel="stylesheet" type="text/css" />
+    <link href="style/imageDisplay.css" rel="stylesheet" type="text/css" />
+    <script type="module" src="js/index.mjs"></script>
+    <script type="module" src="js/api.mjs"></script>
+  </head>
+
+  <body>
+    <!-- main grid container -->
+    <div class = "grid-container">
+
+        <header class ="header-container">
+            <img src = "media/Gallery Header Image.jpg">
+            <h1>The Web Gallery</h1>
+            <p>Your virtual exhibition</p>
+        </header>
+
+        <!-- upload button -->
+        <div class = "button-container">
+        <button type="button" class ="btn" id="upload-btn">Upload Images</button>
+        </div>
+
+        <!-- upload form -->
+        <div class ="form-overlay" id ="upload-overlay">
+          <div class = "upload-form">
+            <button class = "overlay-close" id="close-btn">&times;</button>
+            <div class ="image-area">
+              <img src ="media/Form Image.jpg">
+              <h1>Upload Your Image</h1>
+            </div>
+            <div class = "input-area">
+              <h2>Author</h2>
+              <div class ="textbox">
+                 <textarea
+                  rows="2"
+                  id="author"
+                  class="textbox"
+                  name="author"
+                  placeholder="Enter your name"
+                  required
+                ></textarea>
+              </div>
+              <h2>Image Title</h2>
+              <div class ="textbox" >
+                 <textarea 
+                  rows="2"
+                  id="title"
+                  class="textbox"
+                  name="image-title"
+                  placeholder="Enter the image title"
+                  required
+                ></textarea>
+              </div>
+              <h2>Image Url</h2>
+              <div class ="textbox" >
+                 <textarea 
+                  rows="2"
+                  id="url"
+                  class="textbox"
+                  placeholder="Enter the image url"
+                  required
+                ></textarea>
+              </div>
+              <button class ="btn" id = "submit-button">Submit</button>  
+          </div>
+          </div>
+        </div>
+
+        <!-- Show gallery images -->
+        <div class="image-display-area" id ="img-display">
+          <div class="divider"></div>
+
+          <!-- Image placeholder -->
+          <img id="current-image" src="">
+
+          <!-- Image text -->
+          <div class="textgrid">
+            <div class="textbox">
+              <h3>Author:</h3>
+              <p id="display-author"></p>
+            </div>
+            <div class="textbox">
+              <h3>Title:</h3>
+              <p id="display-title"></p>
+            </div>
+
+            <!-- gallery buttons -->
+            <div class="button-area">
+              <div class="button-left">
+                <button class="btn" id="prev">Previous</button>
+                <button class="btn" id="next">Next</button>
+              </div>
+              <button class="btn" id="delete">Delete</button>
+            </div>
+          </div>
+          <!-- Comment Form -->
+          <div class="comment-form">
+            <div class ="form-title">Add a comment</div>
+            <h3>Username</h3>
+            <textarea id="username" rows="2" placeholder="Write your username here..."></textarea>
+            <h3>Content</h3>
+            <textarea id="comment-input" rows="3" placeholder="Write your comment here..."></textarea>
+            <button class="btn" id="submit-comment">Submit Comment</button>
+          </div>
+
+          <!-- Comments Area -->
+          <div class="comments-area" id="comments-area">
+            <h3>Comments</h3>
+            <!-- Comments will be appended here -->
+          </div>
+          <div class="comments-pagination">
+            <button class="btn" id="prev-comments">Previous Comments</button>
+            <button class="btn" id="next-comments">Next Comments</button>
+          </div>
+
+          <div class="divider"></div>
+        </div>
+
+       <footer>
+        <a href="/credits.html">C r e d i t s</a>
+       </footer>
+            
+        
+    </div>
+  </body>
+</html>

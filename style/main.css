@@ -1,0 +1,148 @@
+/* removes margins for html body so element can use full page area*/
+body {
+  margin: 0;
+}
+
+/* Header font*/
+    @font-face {
+        font-family: 'MasonDeArtisan';
+        src: url('../fonts/MaisondeartisanfreeRegular.otf') format('opentype');
+    }
+
+/* Subheader font*/
+    @font-face {
+        font-family: 'Queensides';
+        src: url('../fonts/QueensidesLight.ttf') format('truetype');
+    }
+
+/* Button Font*/
+    @font-face {
+        font-family: 'Montserrat Light';
+        src: url('../fonts/MontserratExtralight.ttf') format('truetype');
+    }
+
+/* Paragraph Font*/
+    @font-face {
+        font-family: 'Nugo Sans';
+        src: url('../fonts/NugoSansLight.ttf') format('truetype');
+    }
+
+/*establishes the main grid wrapper*/
+.grid-container{
+    display: grid;
+    width: 100vw;
+    grid-template-columns: auto auto auto auto;
+    grid-template-rows: auto auto auto auto auto;
+
+}
+
+/*establishes the main header wrapper*/
+.header-container {
+    position: relative; /* positioning relative to the body*/
+    grid-column: 1 / -1;  
+    height: 300px;        
+    overflow: hidden; 
+    box-sizing: border-box;
+}
+
+/*define styling rules for header image*/
+.header-container img{
+    width: 100%;     
+    height: 100%;    
+    object-fit: cover;
+    border: none;
+    display: block;
+}
+
+/*define styling rules for header main text*/
+.header-container h1{
+    position: absolute;       /* float on top of the image */
+    top: 40%;                 
+    left: 50%;               
+    transform: translate(-50%, -50%);
+    color: white;             
+    font-size: 3em;
+    text-align: center;
+    font-family: 'MasonDeArtisan';
+    font-weight: 150;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.7); 
+}
+
+/*define styling rules for header subtext*/
+.header-container p{
+    position: absolute;       /* float on top of the image */
+    top: 65%;                
+    left: 50%;                
+    transform: translate(-50%, -50%);
+    color: white;             
+    font-size: 1.5em;
+    text-align: center;
+    font-family: 'Queensides';
+    font-weight: 100;
+    text-shadow: 3px 3px 7px rgba(0,0,0,0.7);
+}
+
+/*Define styling for the upload button area*/
+.button-container{
+ position: relative;
+ margin-top: 40px;
+ grid-column: 1 / -1;
+ grid-row: 2;
+ width:100%;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+}
+
+/*Define button styling*/
+.btn {
+  position:relative;
+  white-space: nowrap;
+  border: none;
+  -webkit-border-radius: 5;
+  -moz-border-radius: 5;
+  border-radius: 5px;
+  font-family: "Montserrat";
+  color: #000000;
+  font-size: 20px;
+  background: #78b7db;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+  margin-top: 50px;
+}
+
+.btn:hover {
+  background: #b0dfff;
+  text-decoration: none;
+}
+
+/*define styling for the footer*/
+footer {
+  margin-top: 40px;
+  margin-bottom: 50px;
+  text-align: center;
+  grid-column: 1 / -1;
+  grid-row: -1;
+  font-family: 'Montserrat Light';
+  color: black;
+  font-weight: 300;
+  font-size: 1em;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
+}
+
+/* Defining styling for a normal link */
+a {
+  color: #5596ec; /* default link color */
+  text-decoration: none; /* remove underline if you want */
+}
+
+/* Defining styling for a hovered link */
+a:hover {
+  color: #1272d2; /* color when mouse hovers */
+  text-decoration: underline; /* optional underline on hover */
+}
+
+/* Defining styling for a visited link */
+a:visited {
+  color: #00004d; /* color for links already clicked */
+}

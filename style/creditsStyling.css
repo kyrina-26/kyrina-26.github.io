@@ -1,0 +1,65 @@
+/* Header font*/
+    @font-face {
+        font-family: 'MasonDeArtisan';
+        src: url('../fonts/MaisondeartisanfreeRegular.otf') format('opentype');
+    }
+
+/* Subheader font*/
+    @font-face {
+        font-family: 'Queensides';
+        src: url('../fonts/QueensidesLight.ttf') format('truetype');
+    }
+
+/* Button Font*/
+    @font-face {
+        font-family: 'Montserrat Light';
+        src: url('../fonts/MontserratExtralight.ttf') format('truetype');
+    }
+
+/* Paragraph Font*/
+    @font-face {
+        font-family: 'Nugo Sans';
+        src: url('../fonts/NugoSansLight.ttf') format('truetype');
+    }
+
+
+h1 {
+    margin-left: 50px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-family: "Queensides";
+}
+
+p {
+    margin-left: 50px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-family: "Nugo Sans";
+    font-size:20px;
+}
+
+.contents{
+    display: flex;
+    flex-direction: column;
+}
+
+/* Links inside .link */
+.link a {
+    margin-left: 50px;
+    margin-bottom: 20px;
+    font-family: "Montserrat Light";
+    font-size: 20px;
+    color: #5596ec;
+    text-decoration: none;
+}
+
+/* Hover effect */
+.link a:hover {
+    color: #1272d2;
+    text-decoration: underline;
+}
+
+/* Visited links */
+.link a:visited {
+    color: #00004d;
+}

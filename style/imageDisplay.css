@@ -1,0 +1,143 @@
+/* Header font*/
+    @font-face {
+        font-family: 'MasonDeArtisan';
+        src: url('../fonts/MaisondeartisanfreeRegular.otf') format('opentype');
+    }
+
+/* Subheader font*/
+    @font-face {
+        font-family: 'Queensides';
+        src: url('../fonts/QueensidesLight.ttf') format('truetype');
+    }
+
+/* Button Font*/
+    @font-face {
+        font-family: 'Montserrat Light';
+        src: url('../fonts/MontserratExtralight.ttf') format('truetype');
+    }
+
+/* Paragraph Font*/
+    @font-face {
+        font-family: 'Nugo Sans';
+        src: url('../fonts/NugoSansLight.ttf') format('truetype');
+    }
+
+/*Defining styling for main image area wrapper*/
+.image-display-area{
+    position: relative;
+    grid-column: 1/-1;
+    grid-column: 1 / -1;
+    grid-row: 4;
+    display: grid;
+    grid-template-columns: 1fr; 
+    grid-template-rows: auto auto, auto, auto;
+    justify-items: center; /* center contents horizontally */
+    margin: 70px 0; /* spacing above/below */
+}
+
+/*Defining styling for horizontal divider*/
+.image-display-area .divider {
+    position: relative;      /* relative to page, not absolute over content */
+    width: 100vw;            /* full viewport width */
+    height: 2px;             /* thickness */
+    background-color: black;
+    margin-top: 15px;
+    margin-bottom: 30px;
+}
+
+
+/*Defining styling for main image area*/
+.image-display-area img{
+    width: 80%;          
+    height: auto;        
+    max-height: 500px;   
+    display: block;
+    margin: 0 auto;      /* center horizontally */
+    object-fit: contain; /* prevents distortion, keeps entire image visible */
+}
+
+/*Defining styling for text box area*/
+.image-display-area .textgrid{
+    grid-row: 3;
+    grid-column: 1/-1;
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    align-items: center;
+}
+
+/*Defining styling for text boxes*/
+.image-display-area .textgrid .textbox{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    text-align: center;
+    align-items: baseline;
+    margin-top: 10px;
+}
+
+/*Defining styling for text*/
+.image-display-area h3{
+   font-family: "Queensides";
+   font-size: 20px;
+   margin: 0;
+   line-height: 1.4;
+   display: inline-block;
+}
+
+.image-display-area p{
+    font-family: "Nugo Sans";
+    font-size: 20px;
+    margin: 0;
+   line-height: 1.4;
+   display: inline-block;
+}
+
+/*Defining styling for button area*/
+.button-area {
+    position: relative;
+    display: flex;
+    justify-content: space-between; /* spread buttons across the container */
+    width: 100%;                    
+    margin: 10x 0px 0px 10px;                  
+    padding: 0 20px;      
+    grid-column: 4;     
+    align-content: center;     
+}
+
+/* group Prev + Next together */
+.button-left {
+    display: flex;
+    gap: 10px; /* space between Prev and Next */
+}
+
+
+/*Define button styling*/
+.btn {
+  position:relative;
+  white-space: nowrap;
+  border: none;
+  -webkit-border-radius: 5;
+  -moz-border-radius: 5;
+  border-radius: 5px;
+  font-family: "Montserrat";
+  color: #000000;
+  font-size: 20px;
+  background: #78b7db;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+}
+
+.btn:not(:disabled){
+  background: #b0dfff;
+  text-decoration: none;
+}
+
+.btn:disabled{
+    background:#b4c1c8;
+    cursor: not-allowed;
+}
+
+.hidden {
+    display: none !important;
+}

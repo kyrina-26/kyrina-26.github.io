@@ -1,0 +1,176 @@
+/* Header font*/
+    @font-face {
+        font-family: 'MasonDeArtisan';
+        src: url('../fonts/MaisondeartisanfreeRegular.otf') format('opentype');
+    }
+
+/* Subheader font*/
+    @font-face {
+        font-family: 'Queensides';
+        src: url('../fonts/QueensidesLight.ttf') format('truetype');
+    }
+
+/* Button Font*/
+    @font-face {
+        font-family: 'Montserrat Light';
+        src: url('../fonts/MontserratExtralight.ttf') format('truetype');
+    }
+
+/* Paragraph Font*/
+    @font-face {
+        font-family: 'Nugo Sans';
+        src: url('../fonts/NugoSansLight.ttf') format('truetype');
+    }
+
+/*Defining styling for the form modal overlay*/
+.form-overlay {
+    position: fixed;           /* stays in place over the page */
+    grid-row: 3;
+    top: 50%;                  /* start from center vertically */
+    left: 50%;                 /* start from center horizontally */
+    transform: translate(-50%, -50%); /* actually center it */
+    background: rgba(0,0,0,0.2); /*faint background for contrast */
+    padding: 20px;             /* spacing around popup */
+    display: flex;             /* center content inside */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;             /* on top of everything else */
+    visibility: hidden;        /* hidden by default */
+    opacity: 0;
+    transition: opacity 0.5s ease; /*adds fade in transtion*/
+    border-radius: 15px;       /*rounded corners */
+}
+
+/*defining styling for the close button*/
+.overlay-close {
+    position: absolute;      /* float inside the modal */
+    top: 10px;               /* distance from top */
+    right: 10px;             /* distance from right */
+    background: transparent; /* no background */
+    border: none;            /* no border */
+    font-size: 2.5em;        /* bigger X */
+    cursor: pointer;         /* pointer on hover */
+    color: black;           
+    z-index: 10;             /*makes sure button is on top & remians clickable*/
+}
+
+/*used to activate overlay*/
+.form-overlay.active {
+    visibility: visible;
+    opacity: 1;
+}
+
+
+/*defining styling for the upload form popup*/
+.upload-form{
+    max-width: 90vw;
+    width: 80vw;
+    position:relative;
+    border: none;
+    background: white;
+    border-radius: 15px;
+    padding: 10px 20px 20px 10px;
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    box-shadow: #b0dfff;
+    gap: 5px;
+}
+
+/*defining styling for the upload form decorative image*/
+.upload-form img{
+    grid-column: 1;
+    width: 100%;     
+    height: 100%;    
+    object-fit: cover;
+    border: none;
+    display: block;
+    border-radius: 10px;
+}
+
+/*defining style for image text*/
+.upload-form h1{
+    position: absolute;       /* float on top of the image */
+    top: 40%;                 
+    left: 50%;               
+    transform: translate(-50%, -50%);
+    color: white;             
+    font-size: 3em;
+    text-align: center;
+    font-family: 'MasonDeArtisan';
+    font-weight: 200;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.7); 
+}
+
+/*defining style for form headers*/
+.upload-form h2{
+    position: relative;   
+    left:2%;       
+    color: black;             
+    font-size: 1.5em;
+    text-align: left;
+    font-family: 'Queensides';
+    font-weight: 100;
+    margin: 15px 0 5px 0;
+}
+
+/*define styling for image area wrapper*/
+.upload-form .image-area{
+    grid-column: 1;
+    position: relative;
+}
+
+/*define styling for text area wrapper*/
+.upload-form .input-area{
+    grid-column: 2/-1;
+    width: 100%;
+    display:flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+/*define styling for text fields*/
+.upload-form .input-area .textbox{
+    margin:0;
+    width:90%;
+}
+
+.upload-form .input-area button{
+    margin-top: 5px;
+    align-self: center;
+    width:50%;
+}
+
+.upload-form .input-area .textbox textarea{
+    border: 2px solid  black;
+    border-radius: 5px;
+    font-size:17px;
+    margin-bottom:10px;
+    margin-top:5px;
+    margin-left:10px;
+    text-align: left;
+    align-content: center;
+    font-family: "Nugo Sans";
+    width:100%;
+}
+
+/*Define button styling*/
+.btn {
+  position:relative;
+  white-space: nowrap;
+  -webkit-border-radius: 5;
+  -moz-border-radius: 5;
+  border-radius: 5px;
+  font-family: "Montserrat";
+  color: #000000;
+  font-size: 20px;
+  background: #78b7db;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+}
+
+.btn:hover {
+  background: #b0dfff;
+  text-decoration: none;
+}
+
+

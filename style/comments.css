@@ -1,0 +1,102 @@
+/* Header font*/
+    @font-face {
+        font-family: 'MasonDeArtisan';
+        src: url('../fonts/MaisondeartisanfreeRegular.otf') format('opentype');
+    }
+
+/* Subheader font*/
+    @font-face {
+        font-family: 'Queensides';
+        src: url('../fonts/QueensidesLight.ttf') format('truetype');
+    }
+
+/* Button Font*/
+    @font-face {
+        font-family: 'Montserrat Light';
+        src: url('../fonts/MontserratExtralight.ttf') format('truetype');
+    }
+
+/* Paragraph Font*/
+    @font-face {
+        font-family: 'Nugo Sans';
+        src: url('../fonts/NugoSansLight.ttf') format('truetype');
+    }
+
+/*defining styling for the comment form*/
+.comment-form {
+  margin: 20px 0;
+  display: flex;
+  flex-direction: column;
+  border: 2px solid black;
+  padding: 10px;
+  border-radius: 15px;
+  display: cover;
+  width: 60%;
+}
+
+.comment-form .form-title{
+    margin-bottom: 10px;
+    padding: 12px 18px;
+    border: 2px;
+    border-radius: 15px;
+    font-family: "MasonDeArtisan";
+    background: #4981ae ;
+    font-size: 20px;
+    display: block;
+    color: white;
+}
+
+.comment-form h3 {
+  margin-bottom: 10px;
+  font-family: 'Queensides';
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+/*defining styling for the comment form textarea*/
+.comment-form textarea {
+  padding: 10px;
+  font-family: 'Nugo Sans';
+  font-size: 1em;
+  border: 1px solid black;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+/*Defining Styline for comments area */
+.comments-area {
+  margin-top: 20px;
+  padding: 10px;
+  border-top: 1px solid black;
+  font-family: 'Nugo Sans';
+  display: flex;
+  flex-direction: column;
+}
+
+/*Define styling for header*/
+.comments-area h3 {
+ font-family: "Queensides";
+}
+
+/*Defining styling for text*/
+.comments-area p{
+font-family: "Nugo Sans"
+}
+
+/*Defining styling for comment*/
+.comment {
+  margin-bottom: 10px;
+  padding-bottom: 5px;
+  border-bottom: 1px dotted black;
+  display: flex;
+  flex-direction: column;
+
+}
+
+/*Define styling for button area*/
+.comments-pagination {
+  margin-top: 10px;
+  display: flex;
+  gap: 10px;
+  flex-direction: row;
+}
+
