@@ -1,1 +1,1 @@
-mywebapplication.example.com
+https://kyrina-26.github.io/index.html
